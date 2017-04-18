@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.bacon {
-  margin-top: 55px
+.welcome{
+  text-align: center;
+  size: 10em;
+}
+.landing-page--wrapper {
+  display: flex;
+  justify-content: center;
+}
+.landing-page {
+  height: 336px;
+  width: 780px;
+  background-image: url('travel.jpg');
 }

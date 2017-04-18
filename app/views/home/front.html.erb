@@ -1,22 +1,17 @@
-<h1>Home#front</h1>
-<p>Find me in app/views/home/front.html.erb</p>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
-<div>yolo</div>
+<% unless user_signed_in? %>
+    <h1 class="welcome">WELCOME TO SOCIFY</h1>
+<% end %>
+<div class="landing-page--wrapper">
+  <div class=" row landing-page"></div>
+</div>
+<% if user_signed_in? %>
+  <%= form_for(@post) do |f| %>
+      <div class="form-group">
+        <%= f.label 'Post something' %><br>
+        <%= f.text_area :content, class: 'form-control', autofocus: true,
+                        placeholder: 'What\'s up?' %>
+        <%= f.file_field :attachment, class: 'form-control' %>
+      </div>
+      <%= f.submit :post, class: 'btn btn-primary'%>
+  <% end %>
+<% end %>
