@@ -14,6 +14,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require bindWithDelay
-//= require jquery.datetimepicker
+//= require bind_with_delay
 //= require_tree .
