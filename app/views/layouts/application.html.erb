@@ -32,6 +32,12 @@
         </div>
       </div>
   </nav>
+    <% if notice %>
+      <div class="alert alert-danger fade in alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+        <li><%= notice %></li>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

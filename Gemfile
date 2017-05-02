@@ -38,6 +38,7 @@ end
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'pry'
 end
 
 group :production do
@@ -49,7 +50,7 @@ group :production do
 end
 
 gem 'devise'
-gem 'carrierwave'
+gem 'carrierwave', '~> 1.0'
 gem 'friendly_id', '~> 5.0'
 
 gem 'will_paginate', '~> 3.1.0'

@@ -21,12 +21,13 @@ class PostsController < ApplicationController
 
   # POST /posts
   def create
-    @post = Post.new(post_params)
-
+    @post = Post.new(post_params) do |post|
+      post.user = current_user
+    end
     if @post.save
-      redirect_to @post, notice: 'Post was successfully created.'
+      redirect_to root_path, notice: 'Post was successfully created.'
     else
-      render :new
+      redirect_to root_path, notice: @post.errors.full_messages.first
     end
   end
 
